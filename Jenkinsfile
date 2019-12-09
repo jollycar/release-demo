@@ -5,9 +5,18 @@ pipeline {
         jdk 'java-11-openjdk'
     }
     stages {
-        stage('Build') {
+        stage('Build branch') {
             steps {
-                echo 'Building...'
+                echo 'Building a branch'
+                sh 'mvn clean package'
+            }
+        }
+        stage('Build tag') {
+            when {
+                buildingTag()
+            }
+            steps {
+                echo 'Building a tag'
                 sh 'mvn clean package'
             }
         }
