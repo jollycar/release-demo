@@ -11,7 +11,7 @@
 	<artifactId>release-demo</artifactId>
 	<version>0.0.6-SNAPSHOT</version>
 	<name>release-demo</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo project for Spring Boot.</description>
 
 	<scm>
 		<connection>scm:git:git://github.com/ivohuisjes/release-demo.git</connection>
