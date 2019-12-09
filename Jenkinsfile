@@ -5,7 +5,10 @@ pipeline {
         jdk 'java-11-openjdk'
     }
     stages {
-        stage('Build branch') {
+        stage('Build dev branch') {
+            when {
+                branch 'dev'
+            }
             steps {
                 echo 'Building a branch'
                 sh 'mvn clean package'
