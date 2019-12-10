@@ -7,25 +7,58 @@ pipeline {
     stages {
         stage('Build dev branch') {
             when {
-                branch 'dev'
+                allOf {
+                    not {
+                        buildingTag()
+                    }
+                    not {
+                        branch 'master'
+                    }
+                }
             }
             steps {
-                echo 'Building a branch'
+                echo 'Building dev branch'
                 sh 'mvn clean package'
             }
         }
-        stage('Build tag') {
+        stage('Build prod branch') {
             when {
                 buildingTag()
             }
             steps {
-                echo 'Building a tag'
+                echo 'Building prod branch'
                 sh 'mvn clean package'
             }
         }
-        stage('Deploy') {
+        stage('Publish dev') {
+            when {
+                branch 'dev'
+            }
             steps {
-                echo "Deploying build ${env.BUILD_ID}..."
+                echo 'Publish dev'
+            }
+        }
+        stage('Publish prod') {
+            when {
+                buildingTag()
+            }
+            steps {
+                echo 'Publish prod'
+            }
+        }
+        stage('Skip Publish') {
+            when {
+                allOf {
+                    not {
+                        buildingTag()
+                    }
+                    not {
+                        branch 'master'
+                    }
+                }
+            }
+            steps {
+                echo 'Skip publish'
             }
         }
     }
