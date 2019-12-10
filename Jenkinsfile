@@ -51,6 +51,9 @@ pipeline {
                         buildingTag()
                     }
                     not {
+                        branch 'dev'
+                    }
+                    not {
                         branch 'master'
                     }
                 }
