@@ -18,7 +18,6 @@ pipeline {
             }
             steps {
                 echo 'Building dev branch'
-                sh 'mvn clean package'
             }
         }
         stage('Build prod branch') {
@@ -27,7 +26,6 @@ pipeline {
             }
             steps {
                 echo 'Building prod branch'
-                sh 'mvn clean package'
             }
         }
         stage('Publish dev') {
