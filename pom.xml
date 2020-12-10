@@ -19,6 +19,19 @@
 		<tag>v0.0.1</tag>
 	</scm>
 
+	<distributionManagement>
+		<snapshotRepository>
+			<id>local-snapshots</id>
+			<name>maven-snapshots</name>
+			<url>http://localhost:8081/repository/maven-snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>local-releases</id>
+			<name>maven-releases</name>
+			<url>http://localhost:8081/repository/maven-releases/</url>
+		</repository>
+	</distributionManagement>
+
 	<properties>
 		<java.version>11</java.version>
 	</properties>
