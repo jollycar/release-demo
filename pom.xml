@@ -9,14 +9,14 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>release-demo</artifactId>
-	<version>0.0.9</version>
+	<version>0.0.10-SNAPSHOT</version>
 	<name>release-demo</name>
 	<description>Demo project for Spring Boot.</description>
 
 	<scm>
 		<connection>scm:git:git://github.com/ivohuisjes/release-demo.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/ivohuisjes/release-demo.git</developerConnection>
-		<tag>v0.0.9</tag>
+		<tag>v0.0.1</tag>
 	</scm>
 
 	<properties>
