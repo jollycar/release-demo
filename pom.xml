@@ -80,7 +80,8 @@
 						<updateReleaseToAvoidConflictsMessage>Update release to hotfix version to avoid merge conflicts</updateReleaseToAvoidConflictsMessage>
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
-					<preReleaseGoals>versions:set -DnewVersion=@{version} -DgenerateBackupPoms=false --file mymodule/pom.xml</preReleaseGoals>
+					<!--suppress UnresolvedMavenProperty -->
+					<preReleaseGoals>versions:set -DnewVersion=${revision} -DgenerateBackupPoms=false --file mymodule/pom.xml</preReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
