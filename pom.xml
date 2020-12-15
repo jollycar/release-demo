@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>release-demo</artifactId>
-	<version>0.0.28</version>
+	<version>0.0.29</version>
 	<packaging>pom</packaging>
 	<name>release-demo</name>
 	<description>Demo project for Spring Boot.</description>
@@ -81,7 +81,7 @@
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
 					<!--suppress UnresolvedMavenProperty -->
-					<postReleaseGoals>versions:set -DnewVersion=${project.version} -DgenerateBackupPoms=false --file mymodule/pom.xml</postReleaseGoals>
+					<postReleaseGoals>versions:set -DnewVersion=@{version} -DgenerateBackupPoms=false --file mymodule/pom.xml</postReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
