@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>release-demo</artifactId>
-	<version>0.0.36</version>
+	<version>0.0.37-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>release-demo</name>
 	<description>Demo project for Spring Boot.</description>
@@ -80,8 +80,7 @@
 						<updateReleaseToAvoidConflictsMessage>Update release to hotfix version to avoid merge conflicts</updateReleaseToAvoidConflictsMessage>
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
-					<preReleaseGoals>test</preReleaseGoals>
-					<postReleaseGoals>gitflow-maven-plugin:release -f mymodule/pom.xml</postReleaseGoals>
+					<postReleaseGoals>test gitflow-maven-plugin:release -f mymodule/pom.xml</postReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
