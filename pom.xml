@@ -35,6 +35,7 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<release.version>${project.version}</release.version>
 	</properties>
 
 	<dependencies>
@@ -62,6 +63,7 @@
 				<version>1.15.0</version>
 				<configuration>
 					<versionsForceUpdate>true</versionsForceUpdate>
+					<versionProperty>release.version</versionProperty>
 					<gitFlowConfig>
 						<productionBranch>master</productionBranch>
 						<developmentBranch>develop</developmentBranch>
@@ -80,7 +82,7 @@
 						<updateReleaseToAvoidConflictsMessage>Update release to hotfix version to avoid merge conflicts</updateReleaseToAvoidConflictsMessage>
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
-					<preReleaseGoals>test versions:set -DnewVersion=${project.parent.version} -DgenerateBackupPoms=false --file mymodule/pom.xml</preReleaseGoals>
+					<preReleaseGoals>test versions:set -DnewVersion=${release.version} -DgenerateBackupPoms=false --file mymodule/pom.xml</preReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
