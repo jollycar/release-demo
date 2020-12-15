@@ -80,7 +80,8 @@
 						<updateReleaseToAvoidConflictsMessage>Update release to hotfix version to avoid merge conflicts</updateReleaseToAvoidConflictsMessage>
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
-					<postReleaseGoals>test gitflow-maven-plugin:release -f mymodule/pom.xml</postReleaseGoals>
+					<preReleaseGoals>test</preReleaseGoals>
+					<postReleaseGoals>gitflow-maven-plugin:release -f mymodule/pom.xml</postReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
