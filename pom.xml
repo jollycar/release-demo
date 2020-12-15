@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>release-demo</artifactId>
-	<version>0.0.31</version>
+	<version>0.0.32</version>
 	<packaging>pom</packaging>
 	<name>release-demo</name>
 	<description>Demo project for Spring Boot.</description>
@@ -35,7 +35,7 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<release.version>0.0.31</release.version>
+		<release.version>0.0.32</release.version>
 	</properties>
 
 	<dependencies>
@@ -82,7 +82,7 @@
 						<updateReleaseToAvoidConflictsMessage>Update release to hotfix version to avoid merge conflicts</updateReleaseToAvoidConflictsMessage>
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
-					<preReleaseGoals>test versions:set -DnewVersion=${release.version} -DgenerateBackupPoms=false --file mymodule/pom.xml</preReleaseGoals>
+					<postReleaseGoals>test versions:set -DnewVersion=${release.version} -DgenerateBackupPoms=false --file mymodule/pom.xml</postReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
