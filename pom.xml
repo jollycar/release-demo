@@ -81,7 +81,6 @@
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
 					<preReleaseGoals>test</preReleaseGoals>
-					<postReleaseGoals>test</postReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
