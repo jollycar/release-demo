@@ -93,6 +93,9 @@
 					<generateBackupPoms>false</generateBackupPoms>
 					<processParent>false</processParent>
 					<processProject>false</processProject>
+					<processDependencies>false</processDependencies>
+					<processPlugins>false</processPlugins>
+					<processProperties>false</processProperties>
 				</configuration>
 			</plugin>
 		</plugins>
