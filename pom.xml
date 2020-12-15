@@ -62,7 +62,6 @@
 				<version>1.15.0</version>
 				<configuration>
 					<versionsForceUpdate>true</versionsForceUpdate>
-					<installProject>true</installProject>
 					<gitFlowConfig>
 						<productionBranch>master</productionBranch>
 						<developmentBranch>develop</developmentBranch>
@@ -81,7 +80,7 @@
 						<updateReleaseToAvoidConflictsMessage>Update release to hotfix version to avoid merge conflicts</updateReleaseToAvoidConflictsMessage>
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
-					<preReleaseGoals>versions:set -DnewVersion=@{version} -DprocessParent=false -f mymodule/pom.xml</preReleaseGoals>
+					<preReleaseGoals>versions:set -DnewVersion=@{version} -f mymodule/pom.xml</preReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -91,6 +90,7 @@
 				<configuration>
 					<allowSnapshots>true</allowSnapshots>
 					<generateBackupPoms>false</generateBackupPoms>
+					<processParent>false</processParent>
 				</configuration>
 			</plugin>
 		</plugins>
