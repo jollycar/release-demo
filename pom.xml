@@ -80,7 +80,7 @@
 						<updateReleaseToAvoidConflictsMessage>Update release to hotfix version to avoid merge conflicts</updateReleaseToAvoidConflictsMessage>
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
-					<preReleaseGoals>versions:set -DnewVersion=0.0.33 -DgenerateBackupPoms=false --file mymodule/pom.xml</preReleaseGoals>
+					<preReleaseGoals>versions:set -DnewVersion=@{version} -DgenerateBackupPoms=false --file mymodule/pom.xml</preReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -88,15 +88,6 @@
 				<artifactId>versions-maven-plugin</artifactId>
 				<!-- https://github.com/mojohaus/versions-maven-plugin/issues/426 -->
 				<version>2.7</version>
-				<configuration>
-					<allowSnapshots>true</allowSnapshots>
-					<generateBackupPoms>false</generateBackupPoms>
-					<processParent>false</processParent>
-					<processProject>false</processProject>
-					<processDependencies>false</processDependencies>
-					<processPlugins>false</processPlugins>
-					<processProperties>false</processProperties>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
