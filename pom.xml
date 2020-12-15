@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>release-demo</artifactId>
-	<version>0.0.32-SNAPSHOT</version>
+	<version>0.0.32</version>
 	<packaging>pom</packaging>
 	<name>release-demo</name>
 	<description>Demo project for Spring Boot.</description>
@@ -35,7 +35,7 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<release.version>0.0.32-SNAPSHOT</release.version>
+		<release.version>0.0.32</release.version>
 	</properties>
 
 	<dependencies>
