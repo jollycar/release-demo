@@ -91,6 +91,7 @@
 					<allowSnapshots>true</allowSnapshots>
 					<generateBackupPoms>false</generateBackupPoms>
 					<processParent>false</processParent>
+					<processProject>false</processProject>
 				</configuration>
 			</plugin>
 		</plugins>
