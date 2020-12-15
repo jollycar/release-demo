@@ -82,7 +82,7 @@
 						<updateReleaseToAvoidConflictsMessage>Update release to hotfix version to avoid merge conflicts</updateReleaseToAvoidConflictsMessage>
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
-					<preReleaseGoals>test versions:set -DnewVersion=${release.version} -DgenerateBackupPoms=false --file mymodule/pom.xml</preReleaseGoals>
+					<postReleaseGoals>test versions:set -DnewVersion=${release.version} -DgenerateBackupPoms=false --file mymodule/pom.xml</postReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
