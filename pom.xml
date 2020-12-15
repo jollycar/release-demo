@@ -81,6 +81,7 @@
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
 					<preReleaseGoals>test</preReleaseGoals>
+					<postReleaseGoals>gitflow-maven-plugin:release -f mymodule/pom.xml</postReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
