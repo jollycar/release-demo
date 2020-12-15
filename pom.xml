@@ -59,6 +59,26 @@
 				<groupId>com.amashchenko.maven.plugin</groupId>
 				<artifactId>gitflow-maven-plugin</artifactId>
 				<version>1.15.0</version>
+				<configuration>
+					<gitFlowConfig>
+						<productionBranch>master</productionBranch>
+						<developmentBranch>develop</developmentBranch>
+						<releaseBranchPrefix>release-</releaseBranchPrefix>
+						<origin>origin</origin>
+					</gitFlowConfig>
+					<commitMessages>
+						<releaseStartMessage>Update versions for release @{version}</releaseStartMessage>
+						<releaseFinishMessage>Update for next development version @{version}</releaseFinishMessage>
+						<releaseVersionUpdateMessage>Update for next development version @{version}</releaseVersionUpdateMessage>
+						<tagReleaseMessage>Tag release-@{version}</tagReleaseMessage>
+
+						<updateDevToAvoidConflictsMessage>Update develop to production version to avoid merge conflicts</updateDevToAvoidConflictsMessage>
+						<updateDevBackPreMergeStateMessage>Update develop version back to pre-merge state</updateDevBackPreMergeStateMessage>
+
+						<updateReleaseToAvoidConflictsMessage>Update release to hotfix version to avoid merge conflicts</updateReleaseToAvoidConflictsMessage>
+						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
+					</commitMessages>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
