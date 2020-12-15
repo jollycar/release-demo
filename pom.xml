@@ -81,7 +81,7 @@
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
 					<!--suppress UnresolvedMavenProperty -->
-					<preReleaseGoals>versions:set -DnewVersion=${revision} -DgenerateBackupPoms=false --file mymodule/pom.xml</preReleaseGoals>
+					<preReleaseGoals>versions:set -DnewVersion=${project.version} -DgenerateBackupPoms=false --file mymodule/pom.xml</preReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
