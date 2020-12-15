@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>release-demo</artifactId>
-	<version>0.0.34</version>
+	<version>0.0.35</version>
 	<packaging>pom</packaging>
 	<name>release-demo</name>
 	<description>Demo project for Spring Boot.</description>
@@ -81,7 +81,6 @@
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
 					<preReleaseGoals>test</preReleaseGoals>
-					<postReleaseGoals>test</postReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
