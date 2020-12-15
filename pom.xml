@@ -56,13 +56,9 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>3.0.0-M1</version>
-				<configuration>
-					<tagNameFormat>v@{project.version}</tagNameFormat>
-					<goals>dependency:tree</goals>
-				</configuration>
+				<groupId>com.amashchenko.maven.plugin</groupId>
+				<artifactId>gitflow-maven-plugin</artifactId>
+				<version>1.15.0</version>
 			</plugin>
 		</plugins>
 	</build>
