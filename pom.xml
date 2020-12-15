@@ -81,6 +81,7 @@
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
 					<preReleaseGoals>versions:set -DnewVersion=0.0.33 --file mymodule/pom.xml</preReleaseGoals>
+					<postReleaseGoals>versions:commit --file mymodule/pom.xml</postReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
