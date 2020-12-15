@@ -6,6 +6,6 @@
 
     <groupId>com.example</groupId>
     <artifactId>mymodule</artifactId>
-    <version>0.0.21-SNAPSHOT</version>
+    <version>@{version}</version>
 
 </project>
