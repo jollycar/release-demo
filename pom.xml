@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>release-demo</artifactId>
-	<version>0.0.32</version>
+	<version>0.0.33</version>
 	<packaging>pom</packaging>
 	<name>release-demo</name>
 	<description>Demo project for Spring Boot.</description>
@@ -35,7 +35,6 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<release.version>0.0.32</release.version>
 	</properties>
 
 	<dependencies>
@@ -63,7 +62,6 @@
 				<version>1.15.0</version>
 				<configuration>
 					<versionsForceUpdate>true</versionsForceUpdate>
-					<versionProperty>release.version</versionProperty>
 					<gitFlowConfig>
 						<productionBranch>master</productionBranch>
 						<developmentBranch>develop</developmentBranch>
@@ -82,7 +80,7 @@
 						<updateReleaseToAvoidConflictsMessage>Update release to hotfix version to avoid merge conflicts</updateReleaseToAvoidConflictsMessage>
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
-					<postReleaseGoals>test versions:set -DnewVersion=${release.version} -DgenerateBackupPoms=false --file mymodule/pom.xml</postReleaseGoals>
+					<postReleaseGoals>test versions:set -DnewVersion=${project.version} -DgenerateBackupPoms=false --file mymodule/pom.xml</postReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
