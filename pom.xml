@@ -10,6 +10,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>release-demo</artifactId>
 	<version>0.0.16-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>release-demo</name>
 	<description>Demo project for Spring Boot.</description>
 
