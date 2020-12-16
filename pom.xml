@@ -62,6 +62,7 @@
 				<version>1.15.0</version>
 				<configuration>
 					<versionsForceUpdate>true</versionsForceUpdate>
+					<skipUpdateVersion>true</skipUpdateVersion>
 					<gitFlowConfig>
 						<productionBranch>master</productionBranch>
 						<developmentBranch>develop</developmentBranch>
@@ -80,8 +81,6 @@
 						<updateReleaseToAvoidConflictsMessage>Update release to hotfix version to avoid merge conflicts</updateReleaseToAvoidConflictsMessage>
 						<updateReleaseBackPreMergeStateMessage>Update release version back to pre-merge state</updateReleaseBackPreMergeStateMessage>
 					</commitMessages>
-					<preReleaseGoals>test</preReleaseGoals>
-					<postReleaseGoals>gitflow-maven-plugin:release -f mymodule/pom.xml</postReleaseGoals>
 				</configuration>
 			</plugin>
 			<plugin>
