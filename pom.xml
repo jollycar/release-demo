@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>release-demo</artifactId>
-	<version>0.0.37-SNAPSHOT</version>
+	<version>0.0.37</version>
 	<packaging>pom</packaging>
 	<name>release-demo</name>
 	<description>Demo project for Spring Boot.</description>
@@ -62,7 +62,6 @@
 				<version>1.15.0</version>
 				<configuration>
 					<versionsForceUpdate>true</versionsForceUpdate>
-					<skipUpdateVersion>true</skipUpdateVersion>
 					<gitFlowConfig>
 						<productionBranch>master</productionBranch>
 						<developmentBranch>develop</developmentBranch>
